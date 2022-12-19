@@ -122,6 +122,20 @@ int main()
    }
    return 0;
 }
-8.
-  
+8.swap two num with out temp variable
+#include <stdio.h>
+
+int main()
+{
+   int a,b;
+   scanf("%d%d",&a,&b);
+   a=a+b; 
+   b=a-b;
+   a=a-b;
+   printf("\nAfter swap a=%d b=%d",a,b);
+       
+   
+   return 0;
+}
+
   
