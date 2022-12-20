@@ -1,0 +1,122 @@
+1.#include <stdio.h>  
+int main()  
+{  
+    int x = 10, y = 5;   
+    switch(x>y && x+y>0)  
+    {  
+        case 1:   
+        printf("1");  
+        break;   
+        case 0:   
+        printf("0");  
+        break;  
+        default:   
+        printf("nothing");  
+    }   
+          
+}  
+
+2.#include <stdio.h>  
+int main () {  
+  
+   int i = 10;  
+   int j = 20;  
+   
+   switch(i) {  
+     
+      case 10:   
+         printf("the value of i evaluated in outer switch: %d\n",i);  
+      case 20:  
+         switch(j) {  
+            case 20:  
+               printf("The value of j evaluated in nested switch: %d\n",j);  
+         }  
+   }  
+     
+   printf("Exact value of i is : %d\n", i );  
+   printf("Exact value of j is : %d\n", j );  
+   
+   return 0;  
+}  
+
+3.#include<stdio.h>  
+void main ()  
+{  
+    int i=0,j=2;  
+    for(i = 0;i<5;i++,j=j+2)  
+    {  
+        printf("%d %d\n",i,j);  
+    }  
+   }
+ 4.multiply the given input
+ #include<stdio.h>  
+int main(){    
+int i=1,number=0,b=9;    
+printf("Enter a number: ");    
+scanf("%d",&number);    
+while(i<=10){    
+printf("%d \n",(number*i));    
+i++;    
+}    
+return 0;  
+}   
+}  
+
+5.compute a pow b  
+#include<stdio.h>
+int checkBit(int N,int i)
+{
+    if((N>>i&1)==1)
+        return 1;
+    else
+        return 0;
+}
+int main()
+{
+    int a,b,ans=1;
+    scanf("%d%d",&a,&b);
+    int x=a;
+    for(int i=0;i<=30;i++)
+    {
+        if(checkBit(b,i))
+            ans=ansx;
+        x=xx;
+    }
+    printf("%d",ans);
+    return 0;
+}
+
+6. compute a pow b in python // with limited constraints
+def compute_pow(A,B):
+    ans=1
+    x=A
+    while(B!=0):
+        if ((B&1)==1):
+            ans=(ans*x)% 1000000007
+        B=B>>1
+        x=x*x %1000000007
+    print(ans)
+    
+T=int(input())
+for i in range(T):
+    A,B=map(int,input().split())
+    compute_pow(A,B)
+    
+    
+7.tower of hanoi 
+def Tower_of_hanoi(num,from_A,to_B,end_C):
+    if num==0:
+        return 
+    Tower_of_hanoi(num-1,from_A,end_C,to_B)
+    print("Move",num,"from",from_A,"to",to_B)
+    Tower_of_hanoi(num-1,end_C,to_B,from_A)
+T=int(input())
+for i in range(T):
+    num=int(input())
+    print((2**num)-1)
+    word=Tower_of_hanoi(num,"A","C","B")
+    
+    
+    
+
+
